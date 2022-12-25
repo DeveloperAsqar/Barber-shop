@@ -1,0 +1,462 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: sans-serif;
+}
+.row{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.between{
+    justify-content: space-evenly;
+}
+.first-section{
+    position: relative;
+    background: linear-gradient(rgb(0,0,0,0.5),#009688) ,url(img/Barber_Shop_img/banner.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.first-section .logo{
+    width: 140px;
+    position: absolute;
+    top: 4%;
+    left: 10%;
+}
+.first-section .menuicon{
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    background: #009688;
+    text-align: center;
+    position: fixed;
+    right: 30px;
+    top: 20px;
+    border-radius: 3px;
+    z-index: 5;
+    cursor: pointer;
+}
+.first-section .menuicon img{
+    width: 20px;
+    margin-top: 15px;
+}
+.banner-box{
+    /* width: 100%; */
+    /* border: 1px solid red; */
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: #fff;   
+}
+.banner-box h1{
+    font-family: 'Kaushan Script', cursive;
+    font-size: 130px;
+}
+.banner-box .banner-p1{
+    font-size: 20px;
+    font-style: italic;
+    font-family: sans-serif;
+}
+.banner-btns{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+}
+.banner-btns button{
+    position: relative;
+    width: 150px;
+    height: 45px;
+    border: 1px solid #fff;
+    outline: none;
+    background: none;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    /* overflow: hidden; */
+    transition: .3s all linear;
+    z-index: 1;
+}
+.banner-btns .btn1{
+    margin-right: 25px;
+}
+.banner-btns button span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #fff;
+    transition: .3s all linear;
+    z-index: -1;
+}
+.banner-btns button:hover span{
+    width: 100%;
+}
+.banner-btns button:hover{
+    color: #009688;
+}
+.menu{
+    position: fixed;
+    right: 0;
+    width: 250px;
+    height: 100vh;
+    background-color: #009688;
+    transition: .3s linear all;
+    /* z-index: ; */
+}
+.menu ul{
+    margin-top: 30px;
+    list-style: none;
+    /* border: 1px solid red; */
+}
+.menu ul li{
+    padding: 25px 20px;
+    /* border: 1px solid green; */
+}
+.menu ul li a{
+    text-decoration: none;
+    font-family: sans-serif;
+    color: #fff;
+}
+
+/* ------------------------------ FEATURES SECTION ------------------------------------------ */
+
+
+.features{
+    padding: 70px 0;
+    width: 100%;
+}
+.pageheader{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 4rem;
+}
+.pageheader h2{
+    /* position: relative; */
+    color: #009688;
+    margin-bottom: 10px;
+    font-size: 20px;
+    z-index: 1;
+}
+.pageheader .leaf{
+    width: 50px;
+    height: 35px;
+    background: linear-gradient(#009688,#fff);
+    transform: rotate(10deg) translateX(-25px) translateY(15px);
+    border-top-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+}
+.pageheader h1{
+    font-size: 50px;
+}
+.features-box{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+}
+.features-box .features-text{
+    flex-basis: 50%;
+}
+.features-box .features-text h1{
+    color: #009688;
+    font-weight: 100;
+    margin-bottom: 10px;
+    text-align: left;
+}
+.features-box .features-img{
+    flex-basis: 50%;
+    margin: auto;
+}
+.features-box .features-img img{
+    width: 70%;
+    min-width: 60%;
+    border-radius: 10px;
+}
+.features-desc{
+    display: flex;
+    text-align: center;
+    margin-bottom: 40px;
+} 
+.features-desc .icon i{
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 30px;
+    color: #009688;
+    border: 1px solid #009688;
+    border-radius: 8px;
+}
+.icon-text p{
+    padding: 0 20px;
+    text-align: initial;
+    line-height: 1.5;
+}
+@media screen and (max-width: 770px){
+    .single-service{
+        flex-basis: 100%;
+        margin-bottom: 30px;
+    }
+    .servise-desc p{
+        font-size: 12px;   
+    }
+    hr{
+        margin: 5px auto;
+    }
+    .single-service:hover .servise-desc{
+        bottom: 25%; 
+    }
+}
+
+/* -------------------------------- SERVICES SECTION -------------------------------------- */
+
+/* .services{
+    padding: 70px 0;
+    width: 100%;
+    background: #efefef;
+}
+.service-wrapper{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+}
+.service-wrapper .service-line1 .items{
+    padding: 10px;
+}
+.service-wrapper .service-line1 .items img{
+    position: relative;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+} */
+
+#service{
+    width: 100%;
+    padding: 70px 0;
+    background: #efefef;
+}
+
+.service-box{
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: auto;
+}
+
+.single-service{
+    flex-basis: 48%;
+    text-align: center;
+    border-radius: 7px;
+    margin-bottom: 20px;
+    color: #fff;
+    position: relative;
+}
+
+.single-service img{
+    width: 100%;
+    border-radius: 7px;
+}
+
+.overlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    border-radius: 7px;
+    cursor: pointer;
+    background: linear-gradient(rgba(0,0,0,0.5),#009688);
+    opacity: 0;
+    transition: 1s;
+}
+
+.single-service:hover .overlay{
+    opacity: 1;
+
+}
+
+.servise-desc{
+    width: 80%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    opacity: 0;
+    transform: translateX(-50%);
+    transition: 1s;
+}
+
+hr{
+    background: #fff;
+    height: 2px;
+    border: 0;
+    margin: 15px auto;
+    width: 60%;
+}
+
+.servise-desc p{
+    font-size: 14px;
+
+}
+.single-service:hover .servise-desc{
+    bottom: 40%;
+    opacity: 1;
+}
+
+@media screen and (max-width: 770px){
+    .single-service{
+        flex-basis: 100%;
+        margin-bottom: 30px;
+    }
+    .servise-desc p{
+        font-size: 12px;   
+    }
+    hr{
+        margin: 5px auto;
+    }
+    .single-service:hover .servise-desc{
+        bottom: 25%; 
+    }
+}
+/* ---------------------------------Testimonials Section------------------------------------- */
+#testimonial{
+    width: 100%;
+    padding: 70px 0;
+}
+.testimonial-row{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+.testimonial-col{
+    flex-basis: 28%;
+    padding: 10px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    box-shadow: 0 10px 20px 3px #00968814;
+    transition: .5s;
+    cursor: pointer;
+}
+.testimonial-col p{
+    font-size: 14px;
+}
+.user{
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+.user img{
+    width: 40px;
+    margin-right: 20px;
+    border-radius: 3px;
+}
+.testimonial-col:hover{
+    transform: translateY(-7px);
+}
+@media screen and (max-width: 770px){
+    .testimonial-col{
+        flex-basis: 100%;
+    }
+}
+
+/* -----------------------------------------Footer Section------------------------------------------ */
+#footer{
+    padding: 100px 0 20px;
+    background: #efefef;
+    position: relative;
+}
+.footer-row{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.footer-left,.footer-right{
+    flex-basis: 45%;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+.footer-right{
+    text-align: right;
+}
+.footer-row h1{
+    margin: 10px 0;
+}
+.footer-row p{
+    line-height: 35px;
+}
+
+.footer-left .fa,.footer-right .fa{
+    font-size: 20px;
+    color: #009688;
+    margin: 10px;
+}
+
+.footer-img{
+    max-width: 370px;
+    opacity: 0.1;
+    position: absolute;
+    left: 50%;
+    top: 35%;
+    transform: translate(-50%,-50%);
+}
+
+.social-links{
+    text-align: center;
+}
+.social-links .fa{
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    font-size: 20px;
+    border: 1px solid #009688;
+    margin: 40px 5px 0;
+    color: #009688;
+    cursor: pointer;
+}
+.social-links .fa:hover{
+    background: #009688;
+    color: #fff;
+    transform: translateY(-7px);
+}
+@media screen and (max-width: 770px){
+    .footer-left,.footer-right{
+        flex-basis: 100%;
+        font-size: 14px;
+    }
+    .footer-img{
+        top: 25%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
